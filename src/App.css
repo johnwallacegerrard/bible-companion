@@ -1,0 +1,9 @@
+.app {
+  min-height: 100vh;
+  background: linear-gradient(
+    to bottom right,
+    var(--purple-100),
+    var(--pink-100),
+    var(--blue-100)
+  );
+}
