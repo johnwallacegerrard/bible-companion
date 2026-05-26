@@ -1,8 +1,10 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
 import "./Login.css";
 export default function Login() {
+  const navigate = useNavigate();
+
   useEffect(() => {
     if (localStorage.getItem("token")) {
       navigate("/app");
@@ -52,8 +54,6 @@ export default function Login() {
       setLoading(false);
     }
   };
-
-  const navigate = useNavigate();
 
   return (
     <div className="login">

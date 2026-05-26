@@ -1,4 +1,7 @@
 const ProtectedLayout = ({
+  Header,
+  Nav,
+  MainContent,
   showCreatePlan,
   activeTab,
   setActiveTab,

@@ -19,6 +19,8 @@ export default function Signup() {
     });
   };
 
+  const navigate = useNavigate();
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     setError("");
@@ -39,15 +41,13 @@ export default function Signup() {
       }
 
       console.log("Registered:", data);
-      // later: redirect or auto-login
+      navigate("/app");
     } catch (err) {
       setError("Server error");
     } finally {
       setLoading(false);
     }
   };
-
-  const navigate = useNavigate();
 
   return (
     <div className="signup">

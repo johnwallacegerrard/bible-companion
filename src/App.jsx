@@ -219,8 +219,6 @@ const BibleReadingApp = () => {
     const updatedPlans = [...myPlans];
     const existingIndex = updatedPlans.findIndex((p) => p.id === plan.id);
 
-    console.log("its me bitches");
-
     if (existingIndex === -1) {
       const newPlanWithProgress = {
         ...plan,
@@ -432,6 +430,9 @@ const BibleReadingApp = () => {
             element={
               isAuthenticated() ? (
                 <ProtectedLayout
+                  Header={Header}
+                  Nav={Nav}
+                  MainContent={MainContent}
                   activeTab={activeTab}
                   setActiveTab={setActiveTab}
                   startPlan={startPlan}
@@ -462,31 +463,6 @@ const BibleReadingApp = () => {
           />
         </Routes>
       </BrowserRouter>
-      {/* <Header showCreatePlan={showCreatePlan} />
-      <Nav activeTab={activeTab} setActiveTab={setActiveTab} />
-      <MainContent
-        startPlan={startPlan}
-        activeTab={activeTab}
-        getActivePlan={getActivePlan}
-        streak={streak}
-        streakGoal={streakGoal}
-        myPlans={myPlans}
-        featuredPlans={featuredPlans}
-        friends={friends}
-        sampleFriends={sampleFriends}
-        addFriend={addFriend}
-        churches={churches}
-        sampleChurches={sampleChurches}
-        joinChurch={joinChurch}
-        searchQuery={searchQuery}
-        setSearchQuery={setSearchQuery}
-        setShowAddFriend={setShowAddFriend}
-        getCurrentDayReading={getCurrentDayReading}
-        userProgress={userProgress}
-        reflections={reflections}
-        markComplete={markComplete}
-        addReflection={addReflection}
-      /> */}
     </div>
   );
 };
